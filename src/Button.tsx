@@ -15,13 +15,12 @@ export const Button = ({
   label,
   ...props
 }: ButtonProps) => {
-  const classesArray: string[] = ['font-medium', 'border', 'border-gray-400'];
-  function addClass(className: string) {
-    classesArray.push(className);
-  }
+  const classesArray: string[] = ["font-medium", "border", "border-gray-400", "focus:outline-none", " focus:ring-[3px]", "focus:ring-blue-300",]; // prettier-ignore
 
-  primary && addClass('bg-blue-400 text-white');
-  secondary && addClass("bg-gray-75 border-gray-400 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"); // prettier-ignore
+  const addClass = (className: string) => classesArray.push(className);
+
+  primary && addClass("bg-blue-400 text-white border-transparent hover:bg-blue-500"); // prettier-ignore
+  secondary && addClass("bg-gray-75 border-gray-400 text-gray-700 hover:bg-gray-100 hover:text-gray-900"); // prettier-ignore
   size === 'small' && addClass('text-xs px-2 py-1 rounded');
   size === 'medium' && addClass('text-sm px-2 py-1.5 rounded-md');
   size === 'large' && addClass('text-base px-3 py-1.5 rounded-lg');
