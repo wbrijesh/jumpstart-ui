@@ -3,6 +3,19 @@
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "name": "@wbrijesh/jumpstart-ui",
+  "author": "Brijesh Wawdhane",
+  "module": "dist/jumpstart-ui.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/jumpstart-ui.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/jumpstart-ui.esm.js",
+      "limit": "10 KB"
+    }
+  ],
   "files": [
     "dist",
     "src"
@@ -36,19 +49,6 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "jumpstart-ui",
-  "author": "Brijesh Wawdhane",
-  "module": "dist/jumpstart-ui.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/jumpstart-ui.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/jumpstart-ui.esm.js",
-      "limit": "10 KB"
-    }
-  ],
   "devDependencies": {
     "@babel/core": "^7.17.8",
     "@size-limit/preset-small-lib": "^7.0.8",
